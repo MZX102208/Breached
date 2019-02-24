@@ -10,23 +10,35 @@ import android.view.MenuItem;
 
 public class MapActivity extends AppCompatActivity {
 
+    private int mCurrentPage = 0;
+
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            Fragment currentFragment = new MapFragment();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    Fragment currentFragment = new MapFragment();
-                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                    if (mCurrentPage == 0) return true;
                     ft.replace(R.id.content, currentFragment);
                     ft.commit();
+                    mCurrentPage = 0;
                     return true;
                 case R.id.navigation_dashboard:
-
+                    if (mCurrentPage == 1) return true;
+                    currentFragment = new ReportFragment();
+                    ft.replace(R.id.content, currentFragment);
+                    ft.commit();
+                    mCurrentPage = 1;
                     return true;
                 case R.id.navigation_notifications:
-
+                    if (mCurrentPage == 2) return true;
+                    currentFragment = new ReportFragment();
+                    ft.replace(R.id.content, currentFragment);
+                    ft.commit();
+                    mCurrentPage = 2;
                     return true;
             }
             return false;
@@ -40,6 +52,11 @@ public class MapActivity extends AppCompatActivity {
 
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        Fragment currentFragment = new MapFragment();
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.content, currentFragment);
+        ft.commit();
     }
 
 }
