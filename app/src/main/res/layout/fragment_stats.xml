@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#ffffff"
-    android:gravity="center_vertical">
+    android:background="#ffffff">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -18,8 +17,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/cr_round"
-        android:minWidth="100dp"
-        android:minHeight="100dp"/>
+        android:minWidth="80dp"
+        android:minHeight="80dp"/>
 
         <TextView
             android:id="@+id/crime_rate"
@@ -27,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="54dp"
-            android:text="38"
+            android:text="37"
             android:layout_gravity="center"/>
 
         <TextView
@@ -51,8 +50,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/police_round"
-            android:minWidth="100dp"
-            android:minHeight="100dp"/>
+            android:minWidth="80dp"
+            android:minHeight="80dp"/>
 
         <TextView
             android:id="@+id/police_stations"
@@ -84,8 +83,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/firetruck_round"
-            android:minWidth="100dp"
-            android:minHeight="100dp"/>
+            android:minWidth="80dp"
+            android:minHeight="80dp"/>
 
         <TextView
             android:id="@+id/fire_stations"
@@ -117,8 +116,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/hospital_round"
-            android:minWidth="100dp"
-            android:minHeight="100dp"/>
+            android:minWidth="80dp"
+            android:minHeight="80dp"/>
 
         <TextView
             android:id="@+id/hospitals"
