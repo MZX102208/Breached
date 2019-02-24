@@ -35,7 +35,7 @@ public class MapActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_notifications:
                     if (mCurrentPage == 2) return true;
-                    currentFragment = new ReportFragment();
+                    currentFragment = new StatsFragment();
                     ft.replace(R.id.content, currentFragment);
                     ft.commit();
                     mCurrentPage = 2;
